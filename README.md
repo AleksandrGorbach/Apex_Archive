@@ -63,11 +63,23 @@ _The **Apex Archive** MVP is to have full CRUD with a signin/signup, landing pag
 
 - Desktop Landing
 
-![Detail Page](https://i.imgur.com/MEoWX18.jpg)
+![Home Page Filtered](https://i.imgur.com/6vMZjAh.jpg)
+
+- Filtered Landing Page
+
+![Home Page Filter Dropdown](https://i.imgur.com/Yva17gG.jpg)
+
+- Filter Dropdown
+
+![Register Page](https://i.imgur.com/Mv1ncuU.jpg)
+
+- Register Page
+
+![Detail Page](https://i.imgur.com/nKS70qC.jpg)
 
 - Detail Page
 
-![Form/Post Page](https://i.imgur.com/rFSwgYd.jpg)
+![Form/Post Page](https://i.imgur.com/buaAZnd.jpg)
 
 - New Post Page
 
@@ -77,7 +89,7 @@ _The **Apex Archive** MVP is to have full CRUD with a signin/signup, landing pag
 
 #### Component Tree
 
-![Component Tree](https://i.imgur.com/Sy9GMJH.png)
+![Component Tree](https://i.imgur.com/7UbszjG.png)
 
 #### Component Architecture
 
@@ -90,6 +102,9 @@ src
       |__ images
       |__ mockups
 |__ components/
+      |__Layout
+           |__ Layout.jsx
+           |__ Layout.css
       |__Header
            |__ Header.jsx
            |__ Header.css
