@@ -79,6 +79,14 @@ _The **Apex Archive** MVP is to have full CRUD with a signin/signup, landing pag
 
 - Detail Page
 
+![Create Page](https://i.imgur.com/PEpYmJo.jpg)
+
+- Create Page
+
+![Edit Page](https://i.imgur.com/Sofqazy.jpg)
+
+- Edit Page
+
 ![Form/Post Page](https://i.imgur.com/buaAZnd.jpg)
 
 - New Post Page
@@ -89,7 +97,7 @@ _The **Apex Archive** MVP is to have full CRUD with a signin/signup, landing pag
 
 #### Component Tree
 
-![Component Tree](https://i.imgur.com/7UbszjG.png)
+![Component Tree](https://i.imgur.com/2t683vc.png)
 
 #### Component Architecture
 
