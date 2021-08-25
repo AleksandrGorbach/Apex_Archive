@@ -77,7 +77,7 @@ _The **Apex Archive** MVP is to have full CRUD with a signin/signup, landing pag
 
 #### Component Tree
 
-[Component Tree](https://i.imgur.com/Sy9GMJH.png)
+![Component Tree](https://i.imgur.com/Sy9GMJH.png)
 
 #### Component Architecture
 
@@ -156,7 +156,7 @@ src
 
 #### ERD Model
 
-[ERD](https://i.imgur.com/tA6x0FV.png)
+![ERD](https://i.imgur.com/tA6x0FV.png)
 <br>
 
 ***
