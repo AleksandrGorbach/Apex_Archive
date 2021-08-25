@@ -49,7 +49,7 @@ _The **Apex Archive** MVP is to have full CRUD with a signin/signup, landing pag
 |       Jwt        | _Authentication for users._                |
 |      Rails       | _Backend for the db, models and controllers._ |
 |      Heroku      | _For deploying the backend._               |
-|.     Netlify     | _For deplaying the frontend._              |
+|      Netlify     | _For deplaying the frontend._              |
 
 <br>
 
