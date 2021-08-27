@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :articles
-  resources :categories, only: :index
+  resources :categories, only: [:index, :show]
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
   resources :users, only: :create
