@@ -26,7 +26,7 @@ User.destroy_all
     email: 'jeff@email.com',
     password: 'jeffword',
   )
-@Rebecca=
+@Rebecca =
   User.create!(
     username: 'Rebecca',
     first_name: 'Rebecca',
