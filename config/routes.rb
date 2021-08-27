@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :articles
-  resources :categories, only [:index, :show]
+  resources :categories, only: :index
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
-  resources :users, only [:create]
+  resources :users, only: :create
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
