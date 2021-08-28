@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   const handleLogin = async (loginData) => {
-    const userData = await longinUser(loginData);
+    const userData = await loginUser(loginData);
     setCurrentUser(userData);
     history.push('/');
   };
@@ -53,7 +53,6 @@ function App() {
           <Route path='/register'>
             <SignUp handleRegister={handleRegister} />
           </Route>
-          
         </Switch>
       </Layout>
     </div>

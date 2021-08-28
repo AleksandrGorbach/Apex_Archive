@@ -1,0 +1,61 @@
+import { useState, useEffect } from "react";
+import { Switch, Route, useHistory } from "react-router-dom";
+import Categories from "../screens/Categories/Categories";
+
+import { getAllArticles, getOneArticle, postArticle, putArticle, deleteArticle } from "../services/articles";
+import { getAllCategories } from "../services/categories";
+
+
+export default function MainContainer(props) {
+    const [articles, setArticles] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const { currentUser } = props;
+    const history = useHistory();
+}
+
+useEffect(() => {
+    const fetchArticles = async () => {
+    const articleList = await getAllArticles();
+    setArticles(articleList);
+};
+    fetchArticles();
+}, []);
+
+useEffect(() => {
+    const fetchCategories = async () => {
+    const categoryList = await getAllCategories();
+    setCategories(categoryList);
+    };
+    fetchCategories();
+}, []);
+
+const handleCreate = async (formData) => {
+    const articleData = await postArticle(formData);
+    setArticles((prevState) => [...prevState, articleData]);
+    history.pushState('/articles');
+};
+
+const handleUpdate = async (id, formData) => {
+    const articleData = await putArticle(id, formData);
+    setArticles((prevState) => 
+    prevState.map((articles) => {
+        return articles.id === Number(id) ? articleData : articles;
+    })
+    );
+    history.pushState('/articles');
+};
+
+const handleDelete = async (id) => {
+    await deleteArticle(id);
+    setArticles((prevState) => prevState.filter((article) => article.id !== id));
+};
+
+return (
+    <div>
+        <Switch>
+            <Route path='/categories'>
+                <Categories categories={categories} />
+            </Route>
+        </Switch>
+    </div>
+)
