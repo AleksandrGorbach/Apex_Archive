@@ -36,10 +36,26 @@ function App() {
     history.push('/');
   };
 
-  
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+    history.push('/');
+  };
+
   return (
     <div className="App">
-
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+        <Switch>
+          <Route path='/login'>
+            <SignIn handleLogin={handleLogin} />
+          </Route>
+          <Route path='/register'>
+            <SignUp handleRegister={handleRegister} />
+          </Route>
+          
+        </Switch>
+      </Layout>
     </div>
   );
 }
