@@ -14,7 +14,7 @@ import {
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const histroy = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -27,20 +27,20 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    // history.push('/');
   };
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    // history.push('/');
   };
 
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
-    history.push('/');
+    // history.push('/');
   };
 
   return (
