@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Categories from "../screens/Categories/Categories";
-
+import Article from "../screens/Article/Article";
+import ArticleCreate from "../screens/ArticleCreate/ArticleCreate";
 import { getAllArticles, getOneArticle, postArticle, putArticle, deleteArticle } from "../services/articles";
 import { getAllCategories } from "../services/categories";
 
@@ -11,7 +12,7 @@ export default function MainContainer(props) {
     const [categories, setCategories] = useState([]);
     const { currentUser } = props;
     const history = useHistory();
-}
+
 
 useEffect(() => {
     const fetchArticles = async () => {
@@ -56,6 +57,17 @@ return (
             <Route path='/categories'>
                 <Categories categories={categories} />
             </Route>
+            <Route path='/articles/new'>
+                <ArticleCreate handleCreate={handleCreate} />
+            </Route>
+            <Route path='/articles'>
+                <Article
+                  articles={articles}
+                  handleDelete={handleDelete}
+                  currentUser={currentUser}
+                />
+            </Route>
         </Switch>
     </div>
 )
+}

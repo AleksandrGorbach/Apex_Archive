@@ -55,7 +55,7 @@ export default function ArticleCreate(props) {
         onChange={handleChange}
         />
       </label>
-      <label>
+      {/* <label>
         Category:
          <option value="category">Category</option>
             {allCategories.map((cat) => {
@@ -63,7 +63,7 @@ export default function ArticleCreate(props) {
                 <option key={cat.id} name='category' value={Number(cat.id)}>{cat.name}</option>
               )
             })}
-      </label>
+      </label> */}
       <button>Submit</button>
     </form>
   );
