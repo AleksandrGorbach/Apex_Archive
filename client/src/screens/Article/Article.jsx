@@ -9,7 +9,9 @@ export default function Articles(props) {
       {articles.map((article) => (
         <div key={article.id}>
           <Link to={`/articles/${article.id}`}>
-            <p>{article.name}</p>
+            <p>{article.title}</p>
+            <p>{article.content}</p>
+            <img src={article.img_url} alt={article.title}/>
           </Link>
           {currentUser?.id === article.user_id && (
             <div>
@@ -21,7 +23,7 @@ export default function Articles(props) {
           )}
         </div>
       ))}
-      <Link to='/articles/new'>
+      <Link to='/new'>
         <button>Create</button>
       </Link>
     </div>
