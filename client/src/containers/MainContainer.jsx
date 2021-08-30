@@ -33,7 +33,7 @@ useEffect(() => {
 const handleCreate = async (formData) => {
     const articleData = await postArticle(formData);
     setArticles((prevState) => [...prevState, articleData]);
-    history.pushState('/articles');
+    history.push('/articles');
 };
 
 const handleUpdate = async (id, formData) => {
@@ -43,7 +43,7 @@ const handleUpdate = async (id, formData) => {
         return articles.id === Number(id) ? articleData : articles;
     })
     );
-    history.pushState('/articles');
+    history.push('/articles');
 };
 
 const handleDelete = async (id) => {
@@ -54,12 +54,13 @@ const handleDelete = async (id) => {
 return (
     <div>
         <Switch>
+            <Route path='/articles/new'>
+                <ArticleCreate handleCreate={handleCreate} categories={categories}/>
+            </Route>
             <Route path='/categories'>
                 <Categories categories={categories} />
             </Route>
-            <Route path='/articles/new'>
-                <ArticleCreate handleCreate={handleCreate} />
-            </Route>
+  
             <Route path='/articles'>
                 <Article
                   articles={articles}

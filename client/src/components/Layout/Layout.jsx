@@ -18,6 +18,7 @@ export default function Layout(props) {
             {currentUser && (
                 <div>
                     <Link to='/articles'>Articles</Link>
+                    <Link to='/articles/new'>Post Article</Link>
                 </div>
             )}
             {props.children}

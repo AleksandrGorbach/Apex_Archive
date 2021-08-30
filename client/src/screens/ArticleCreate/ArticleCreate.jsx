@@ -7,8 +7,9 @@ export default function ArticleCreate(props) {
     img_url: '',
     category_id: '',
   });
+
   const { title, content, img_url, category_id } = formData;
-  const { handleCreate } = props;
+  const { handleCreate, categories } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,15 +56,17 @@ export default function ArticleCreate(props) {
         onChange={handleChange}
         />
       </label>
-      {/* <label>
+      <label>
         Category:
+        <select onChange={handleChange} name='category_id' value={category_id}>
          <option value="category">Category</option>
-            {allCategories.map((cat) => {
+            {categories.map((cat) => {
               return (
                 <option key={cat.id} name='category' value={Number(cat.id)}>{cat.name}</option>
               )
             })}
-      </label> */}
+        </select>
+      </label>
       <button>Submit</button>
     </form>
   );
