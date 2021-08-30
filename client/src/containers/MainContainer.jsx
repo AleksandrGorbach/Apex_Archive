@@ -3,6 +3,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Categories from "../screens/Categories/Categories";
 import Article from "../screens/Article/Article";
 import ArticleCreate from "../screens/ArticleCreate/ArticleCreate";
+import ArticleEdit from "../screens/ArticleEdit/ArticleEdit";
 import { getAllArticles, getOneArticle, postArticle, putArticle, deleteArticle } from "../services/articles";
 import { getAllCategories } from "../services/categories";
 
@@ -60,7 +61,9 @@ return (
             <Route path='/categories'>
                 <Categories categories={categories} />
             </Route>
-  
+            <Route path='/articles/:id/edit'>
+                <ArticleEdit articles={articles} handleUpdate={handleUpdate}/>
+            </Route>
             <Route path='/articles'>
                 <Article
                   articles={articles}
