@@ -16,7 +16,6 @@ export default function ArticleDetail(props) {
     };
     fetchArticleItem();
   }, [id]);
-console.log(id)
 
 
   return (

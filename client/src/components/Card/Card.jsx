@@ -7,6 +7,7 @@ export default function Card({article}) {
             <Link to={`/articles/${article.id}`}><img src={article.img_url} alt={article.title} />
             <h3>{article.title}</h3>
             <p>{article.content}</p>
+            <p>{article.category_id}</p>
             </Link>
         </div>
     )
