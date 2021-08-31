@@ -31,15 +31,16 @@ export default function Register(props) {
             <h2>Apex Archive</h2>
             <h4>Register</h4>
             </header>
-                <input
+            <div className='register-form'>
+                <input className='register-input'
                     type='text'
                     name='firstname'
                     placeholder='First Name'
                     value={formData.firstname}
                     onChange={handleChange}
                 />
-            <br />
-                <input
+            <br /> 
+                <input className='register-input'
                     type='text'
                     name='lastname'
                     placeholder='Last Name'
@@ -47,7 +48,7 @@ export default function Register(props) {
                     onChange={handleChange}
                 />
             <br />
-                <input
+                <input className='register-input'
                     type='text'
                     name='username'
                     placeholder='Username'
@@ -55,7 +56,7 @@ export default function Register(props) {
                     onChange={handleChange}
                 />
             <br />
-                <input
+                <input className='register-input'
                     type='text'
                     name='email'
                     placeholder='Email'
@@ -63,7 +64,7 @@ export default function Register(props) {
                     onChange={handleChange}
                 />
             <br />
-                <input
+                <input className='register-input'
                     type='password'
                     name='password'
                     placeholder='Password'
@@ -72,6 +73,7 @@ export default function Register(props) {
                 />
             <br />
             <button className='register-button'>SIGN UP</button>
+            </div>
             </section>
         </form>
     );

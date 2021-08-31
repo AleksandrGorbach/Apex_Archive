@@ -1,0 +1,29 @@
+.footer {
+    position: fixed;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+.created {
+    font-weight: 800;
+    color: hsl(237, 56%, 67%);
+    margin: 0;
+}
+
+.created span {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 680px) {
+    .footer {
+        /* width: px; */
+    }
+
+    .created {
+        display: none;
+    }
+}

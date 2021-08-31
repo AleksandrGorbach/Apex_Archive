@@ -1,69 +1,52 @@
 import React, {useState} from 'react'
+// import { Link } from 'react-router-dom'
 import styled from 'styled-components';
-import About from '../Modal-About/Modal-About';
-import { signOut } from '../../services/users';
-import SignIn from '../../views/SignIn/SignIn';
+// import About from '../Modal-About/Modal-About';
+// import { signOut } from '../../services/users';
+// import SignIn from '../../screens/SignIn/SignIn';
+// import SignIn from '../../views/SignIn/SignIn';
 // import './Navbar.css'
 
 const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  
-    const handleSignOut = () => {
-      signOut();
-      props.setUser(null);
-    };
+  const {currentUser, handleLogout} = props;
 
     const upperCase = (str) => {
       return str.replace(/\w\S*/g, function(txt){
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
       })
-    }
-    return (
-        <Nav>
-            <Logo href="/">
-                Skill<span>Bid</span>
-            </Logo>
-            <Hamburger onClick={() => setIsOpen(!isOpen)}>
-                <span />
-                <span />
-                <span />
-        </Hamburger>
-        {props.user ? (
-          <>
-            <div className='signedNav'>
-            <div id='userName'>Hello {upperCase(props.user?.username)}!</div>
-              <button id='signOut' onClick={handleSignOut}>Sign Out</button>
-            <Menu isOpen={isOpen}>
-              <About />
-            <MenuLink href="/NewJob" id="newJob">New Job</MenuLink>
-            <MenuLink href="/ContactUs" id="signedContactUs">Contact Us</MenuLink>
-              </Menu>      
-              </div>
-         </>
-        ) : (
-          <div className="unsignedNav">
-            <Menu isOpen={isOpen}>
-            <MenuLink href="/sign-up" id="signUp"></MenuLink>
-               <SignIn />
-            {/* <MenuLink href="/sign-in">Sign-In</MenuLink> */}
-        
-            <About />
-                <MenuLink href="/ContactUs" id="contactUs">Contact Us</MenuLink>
-             
-              </Menu>
-              </div>
-        )}
-        </Nav>
-    );
-};
+//     }
+//     return (
+//         <header>
+//             <Navbar />
+//             <h1>Apex Archive</h1>
+//             {currentUser ? (
+//                 <div>
+//                     <p>{currentUser.username}</p>
+//                     <button onClick={handleLogout}>Logout</button>
+//                 </div>
+//             ) : (
+//                 <Link to='/login'>Login/Register</Link>
+//             )}
+//             <hr />
+//             {currentUser && (
+//                 <div>
+//                     <Link to='/articles'>Articles</Link>
+//                     <Link to='/articles/new'>Post Article</Link>
+//                 </div>
+//             )}
+//             {props.children}
+//         </header>
+//     );
+// };
 
 const Nav = styled.div`
+    width: 100vw;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* background-image: linear-gradient(to left,#fbfbfb, #ef629f); */
     background-image: linear-gradient(to top, #eecda3, #ef629f);
     position: relative;
     z-index: 20;
