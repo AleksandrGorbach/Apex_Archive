@@ -27,37 +27,29 @@ export default function ArticleCreate(props) {
       }}
     >
       <h3>Create Article</h3>
-      <label>
-        Name:
         <input
         type='text' 
         name='title' 
+        placeholder='Name'
         value={title} 
         onChange={handleChange} 
         />
-      </label>
       <br />
-      <label>
-        Image:
         <input
         type='text'
         name='img_url'
+        placeholder='Image URL'
         value={img_url}
         onChange={handleChange}
         /> 
-      </label>
       <br />
-      <label>
-        Content:
         <input
         type='text'
         name='content'
+        placeholder='content'
         value={content}
         onChange={handleChange}
         />
-      </label>
-      <label>
-        Category:
         <select onChange={handleChange} name='category_id' value={category_id}>
          <option value="category">Category</option>
             {categories.map((cat) => {
@@ -66,7 +58,6 @@ export default function ArticleCreate(props) {
               )
             })}
         </select>
-      </label>
       <button>Submit</button>
     </form>
   );
