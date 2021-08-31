@@ -4,6 +4,7 @@ import Categories from "../screens/Categories/Categories";
 import Article from "../screens/Article/Article";
 import ArticleCreate from "../screens/ArticleCreate/ArticleCreate";
 import ArticleEdit from "../screens/ArticleEdit/ArticleEdit";
+import ArticleDetail from "../screens/ArticleDetail/ArticleDetail";
 import { getAllArticles, getOneArticle, postArticle, putArticle, deleteArticle } from "../services/articles";
 import { getAllCategories } from "../services/categories";
 
@@ -55,14 +56,17 @@ const handleDelete = async (id) => {
 return (
     <div>
         <Switch>
+            <Route path='/articles/:id/edit'>
+                <ArticleEdit articles={articles} handleUpdate={handleUpdate}/>
+            </Route>
             <Route path='/articles/new'>
                 <ArticleCreate handleCreate={handleCreate} categories={categories}/>
             </Route>
+            <Route path='/articles/:id' handleUpdate={handleUpdate} handleDelete={handleDelete}>
+                <ArticleDetail />
+            </Route>
             <Route path='/categories'>
                 <Categories categories={categories} />
-            </Route>
-            <Route path='/articles/:id/edit'>
-                <ArticleEdit articles={articles} handleUpdate={handleUpdate}/>
             </Route>
             <Route path='/articles'>
                 <Article
@@ -71,6 +75,7 @@ return (
                   currentUser={currentUser}
                 />
             </Route>
+            
         </Switch>
     </div>
 )

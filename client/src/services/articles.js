@@ -6,7 +6,7 @@ export const getAllArticles = async (id) => {
 };
 
 export const getOneArticle = async (id) => {
-    const resp = await api.post(`/articles/${id}`);
+    const resp = await api.get(`/articles/${id}`);
     return resp.data;
 };
 

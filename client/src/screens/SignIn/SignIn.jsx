@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './SignIn.css'
 
 export default function Login(props) {
     const [formData, setFormData] = useState({
@@ -18,34 +19,41 @@ export default function Login(props) {
 
     return (
         <form
-            onSubmit={(e) => {
+                        onSubmit={(e) => {
                 e.preventDefault();
                 handleLogin(formData);
             }}
-        >
-            <h3>Login</h3>
-            <label>
-                Username:
-                <input
-                    type='text'
+           >
+            {/* <div className="login-container"> */}
+            <section className="login">
+            <header>
+            <h2>Apex Archive</h2>
+            <h4>Login</h4>
+            </header>
+            <div className="login-form"
+>   
+                <input className="login-input"
                     name='username'
+                    type='text'
+                    placeholder='Username'
                     value={formData.username}
                     onChange={handleChange}
+                    // required autofocus
                 />
-            </label>
             <br />
-            <label>
-                Password:
-                <input
-                type='password'
+                <input className="login-input"
                 name='password'
+                type='password'
+                placeholder='Password'
                 value={formData.password}
                 onChange={handleChange}
                 />
-            </label>
             <br />
-            <Link to='/register'>Register</Link>
-            <button>Submit</button>
+            <Link to='/register'>Don't have an account? Sign Up!</Link>
+            <button className="login-button">SIGN IN</button>
+            </div>
+            </section>
+            {/* </div> */}
         </form>
     );
 }
