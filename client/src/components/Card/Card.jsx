@@ -5,8 +5,16 @@ import { Link } from 'react-router-dom';
 
 export default function Card({article}) {
     return (
-        <div data-aos="zoom-in-up" data-aos-duration="1000" className="flex justify-between m-6">
-            <div className="flex flex-col min-h-100 w-72 border-2 mx-auto bg-white p-2 rounded-lg shadow-lg">
+        <div data-aos="zoom-in-down" data-aos-duration="1000" className="motion-safe:animate-fadeIn flex justify-between m-6">
+            <div className="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
+            <div className="absolute top-0 right-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
+            <div className="absolute top-0 left-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
+            <div className="absolute top-0 left-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
+            <div className="absolute bottom-0 left-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
+            <div className="absolute bottom-0 left-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
+            <div className="absolute bottom-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
+            <div className="absolute bottom-0 right-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
+            <div className="transform hover:scale-110 motion-reduce:transform-none flex flex-col max-h-200 min-h-152 w-72 border-2 mx-auto bg-gradient-to-r from-firstgreen to-secondgreen p-2 rounded-lg shadow-lg">
                 <Link to={`/articles/${article.id}`}>
                 <img src={article.img_url} alt={article.title} className="rounded flex flex-col justify-center h-500 w-auto bg-cover"/>                                
                 <h3 className="text-2xl font-light text-gray-800">{article.title}</h3>
@@ -17,3 +25,5 @@ export default function Card({article}) {
         </div>
     )
 }
+
+//  data-aos="fade-up" data-aos-duration="1000" 

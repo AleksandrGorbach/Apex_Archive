@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './SignUp.css';
 
 export default function Register(props) {
     const [formData, setFormData] = useState({
@@ -24,59 +25,54 @@ export default function Register(props) {
                 e.preventDefault();
                 handleRegister(formData);
             }}
-        >
-            <h3>Register</h3>
-            <label>
-                First Name:
+        >   
+            <section className="register">
+            <header>
+            <h2>Apex Archive</h2>
+            <h4>Register</h4>
+            </header>
                 <input
                     type='text'
                     name='firstname'
+                    placeholder='First Name'
                     value={formData.firstname}
                     onChange={handleChange}
                 />
-            </label>
             <br />
-            <label>
-                Last Name:
                 <input
                     type='text'
                     name='lastname'
+                    placeholder='Last Name'
                     value={formData.lastname}
                     onChange={handleChange}
                 />
-            </label>
             <br />
-            <label>
-                Username:
                 <input
                     type='text'
                     name='username'
+                    placeholder='Username'
                     value={formData.username}
                     onChange={handleChange}
                 />
-            </label>
             <br />
-            <label>
-                Email:
                 <input
                     type='text'
                     name='email'
+                    placeholder='Email'
                     value={formData.email}
                     onChange={handleChange}
                 />
-            </label>
             <br />
-            <label>
-                Password:
                 <input
                     type='password'
                     name='password'
+                    placeholder='Password'
                     value={formData.password}
                     onChange={handleChange}
                 />
-            </label>
             <br />
-            <button>Submit</button>
+            <button className='register-button'>SIGN UP</button>
+            </section>
         </form>
     );
 }

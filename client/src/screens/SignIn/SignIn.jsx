@@ -19,7 +19,7 @@ export default function Login(props) {
 
     return (
         <form
-                        onSubmit={(e) => {
+                onSubmit={(e) => {
                 e.preventDefault();
                 handleLogin(formData);
             }}
@@ -38,7 +38,6 @@ export default function Login(props) {
                     placeholder='Username'
                     value={formData.username}
                     onChange={handleChange}
-                    // required autofocus
                 />
             <br />
                 <input className="login-input"
