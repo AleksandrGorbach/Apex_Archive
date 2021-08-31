@@ -14,7 +14,9 @@ export default function ArticleEdit(props) {
   useEffect(()=> {
     const prefillFormData = () => {
       const articleItem = articles.find((article)=> article.id === Number(id));
-      setFormData({ title: articleItem.title, img_url: articleItem.img_url, content: articleItem.content })
+      setFormData({ title: articleItem?.title, img_url: articleItem?.img_url, content: articleItem?.content })
+      console.log(articleItem)
+
     }
     if (articles.length) {
       prefillFormData()

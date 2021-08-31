@@ -9,9 +9,9 @@ export default function Articles(props) {
       {articles.map((article) => (
         <div key={article.id}>
           <Link to={`/articles/${article.id}`}>
-            <p>{article.title}</p>
-            <p>{article.content}</p>
-            <img src={article.img_url} alt={article.title}/>
+            <h2 className="article-title">{article.title}</h2>
+            <img className="article-img" src={article.img_url} alt={article.title}/>
+            <p className="article-content">{article.content}</p>
           </Link>
           {currentUser?.id === article.user_id && (
             <div>

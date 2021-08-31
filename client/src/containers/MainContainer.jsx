@@ -62,8 +62,8 @@ return (
             <Route path='/articles/new'>
                 <ArticleCreate handleCreate={handleCreate} categories={categories}/>
             </Route>
-            <Route path='/articles/:id' handleUpdate={handleUpdate} handleDelete={handleDelete}>
-                <ArticleDetail />
+            <Route path='/articles/:id'>
+                <ArticleDetail handleUpdate={handleUpdate} handleDelete={handleDelete} currentUser={currentUser}/>
             </Route>
             <Route path='/categories'>
                 <Categories categories={categories} />
