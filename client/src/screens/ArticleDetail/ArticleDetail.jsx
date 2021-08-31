@@ -20,16 +20,16 @@ console.log(id)
 
 
   return (
-    <div>
+    <div className="detail-container">
       <img src={articleItem.img_url}/>
       <h3>{articleItem?.title}</h3>
       <p>{articleItem?.content}</p>    
           {currentUser?.id === articleItem?.user_id && (
             <div>
               <Link to={`/articles/${articleItem?.id}/edit`}>
-                <button>Edit</button>
+                <button className="edit-btn">Edit</button>
               </Link>
-              <button onClick={() => handleDelete(article?.id)}>Delete</button>
+              <button className="delete-btn"onClick={() => handleDelete(article?.id)}>Delete</button>
             </div>
           )}
     </div>
