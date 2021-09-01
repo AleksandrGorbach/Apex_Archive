@@ -67,14 +67,6 @@ export default function ArticleEdit(props) {
           value={content} 
           onChange={handleChange}
         />
-        {/* <select className="create-input" onChange={handleChange} name='category_id' value={category_id}>
-         <option value="category">Category</option>
-            {categories.map((cat) => {
-              return (
-                <option key={cat.id} name='category' value={Number(cat.id)}>{cat.name}</option>
-              )
-            })}
-        </select> */}
       <button className="edit-button">Submit</button>
       </section>
     </form>
