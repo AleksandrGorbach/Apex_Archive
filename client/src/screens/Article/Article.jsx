@@ -16,10 +16,6 @@ export default function Articles(props) {
        
       ))}
        </div>
-      <Link to='/new'>
-        <button>Create</button>
-      </Link>
-
     </div>
   );
 }
