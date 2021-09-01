@@ -15,10 +15,10 @@ const upperCase = (str) => {
     <div className=''>
       <nav className='navbar'>
           <label className='navbar-toggle' id='js-navbar-toggle' for='chkToggle'>
-              <i className='fa fa-bars'></i>
           </label>
           <a href='#' className='logo'></a>
-        <Link className='nav-links' to='/articles'>Apex Archive</Link>
+          <input type='checkbox' id='chkToggle'></input>
+            <Link className='nav-links' to='/articles'>Apex Archive</Link>
         <Link to='/articles/new' className='nav-links'>New Post</Link>
       {currentUser ? (
         <div className='nav-links'>
