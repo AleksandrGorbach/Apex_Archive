@@ -21,14 +21,15 @@ export default function ArticleDetail(props) {
   return (
     <div className="detail-container">
       <img className="detail-img" src={articleItem.img_url}/>
-      <h1 className="detail-title">{articleItem?.title}</h1>
-      <p className="detail-content">{articleItem?.content}</p>    
+      <h1 className="detail-title"><span>{articleItem?.title}</span></h1>
+        <p className="detail-content">{articleItem?.content}</p> 
           {currentUser?.id === articleItem?.user_id && (
             <div>
               <Link to={`/articles/${articleItem?.id}/edit`}>
-                <button className="edit-btn">Edit</button>
+                <button className="edit-btn"><span>Edit</span></button>
+                {/* <br /> */}
               </Link>
-              <button className="delete-btn"onClick={() => handleDelete(article?.id)}>Delete</button>
+              <button className="delete-btn"onClick={() => handleDelete(article?.id)}><span>Delete</span></button>
             </div>
           )}
     </div>

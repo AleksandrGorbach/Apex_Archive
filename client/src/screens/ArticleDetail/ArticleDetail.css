@@ -7,7 +7,19 @@
 .detail-title {
     font-size: xx-large;
     display: flex;
+    background-image: linear-gradient(90deg, red,blue);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+    width: 380px;
+    /* border-bottom: 2px solid black; */
+    text-decoration: none;
+    font-weight: 900;
+}
 
+.detail-title:hover {
+    background-size: 100% 3px;
 }
 
 .detail.content {
@@ -16,9 +28,126 @@
 }
 
 .edit-btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #4C566A;
+    border: none;
+    padding: 20px;
+    width: 150px;
+    height: 50px;
+    transition: all 0.5s;
+}
 
+
+.edit-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.edit-btn span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.edit-btn:hover span {
+    padding-right: 25px;
+}
+
+.edit-btn:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .delete-btn {
-    
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #4C566A;
+    border: none;
+    padding: 20px;
+    width: 150px;
+    height: 50px;
+    transition: all 0.5s;
+}
+
+
+.delete-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.delete-btn span:after {
+    content: '«';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.delete-btn:hover span {
+    padding-right: 25px;
+}
+
+.delete-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* new btn */
+.delete-btn {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)
+}
+
+.delete-btn {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.delete-btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.edit-btn {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)
+}
+
+.edit-btn {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.edit-btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
