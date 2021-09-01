@@ -21,10 +21,10 @@
 }
 
 #git, #link {
-    /* display: flex; */
+    display: flex;
     position: relative;
     top: 17px;
-    left: 10px;
+    left: 10px; 
 }
 
 

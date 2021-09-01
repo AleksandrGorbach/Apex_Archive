@@ -5,15 +5,8 @@ import { Link } from 'react-router-dom';
 
 export default function Card({article}) {
     return (
-        <div data-aos="zoom-in-down" data-aos-duration="1000" className="motion-safe:animate-fadeIn flex justify-between m-6">
-            <div className="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
-            <div className="absolute top-0 right-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
-            <div className="absolute top-0 left-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
-            <div className="absolute top-0 left-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
-            <div className="absolute bottom-0 left-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
-            <div className="absolute bottom-0 left-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
-            <div className="absolute bottom-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-firstgreen animate-ping"></div>
-            <div className="absolute bottom-0 right-0 -mr-1 w-4 h-4 rounded-full bg-firstgreen"></div>
+        <div className="motion-safe:animate-fadeIn flex justify-between m-6">
+         {/* <div data-aos="zoom-in-down" data-aos-duration="1000" className="w-80 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 duration-500 transform transition cursor-pointer"> */}
             <div className="transform hover:scale-110 motion-reduce:transform-none flex flex-col max-h-200 min-h-152 w-72 border-2 mx-auto bg-gradient-to-r from-firstgreen to-secondgreen p-2 rounded-lg shadow-lg">
                 <Link to={`/articles/${article.id}`}>
                 <img src={article.img_url} alt={article.title} className="rounded flex flex-col justify-center h-500 w-auto bg-cover"/>                                
