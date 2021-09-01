@@ -1,0 +1,24 @@
+.detail-img {
+    height: 500px;
+    width: 100%;
+    
+}
+
+.detail-title {
+    font-size: xx-large;
+    display: flex;
+
+}
+
+.detail.content {
+    display: flex;
+    /* justify-content: flex-start; */
+}
+
+.edit-btn {
+
+}
+
+.delete-btn {
+    
+}
