@@ -14,7 +14,7 @@ const upperCase = (str) => {
     return (
     <div className=''>
       <nav className='navbar'>
-          <label className='navbar-toggle' id='js-navbar-toggle' for='chkToggle'>
+          <label className='navbar-toggle' id='js-navbar-toggle' htmlFor='chkToggle'>
           </label>
           <a href='#' className='logo'></a>
           <input type='checkbox' id='chkToggle'></input>
