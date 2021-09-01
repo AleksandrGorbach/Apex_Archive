@@ -15,12 +15,13 @@ export default function ArticleDetail(props) {
     };
     fetchArticleItem();
   }, [id]);
-
+console.log(articleItem)
 
   return (
     <div className="detail-container">
       <img className="detail-img" src={articleItem.img_url} alt={articleItem?.title}/>
       <h1 className="detail-title"><span>{articleItem?.title}</span></h1>
+      <h5>{articleItem?.category?.name}</h5>
         <p className="detail-content">{articleItem?.content}</p> 
           {currentUser?.id === articleItem?.user_id && (
             <div>

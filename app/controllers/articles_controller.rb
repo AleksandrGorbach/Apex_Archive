@@ -6,12 +6,12 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
 
-    render json: @articles
+    render json: @articles, include: :category
   end
 
   # GET /articles/1
   def show
-    render json: @article
+    render json: @article, include: :category
   end
 
   # POST /articles

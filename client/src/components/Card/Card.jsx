@@ -9,7 +9,7 @@ export default function Card({article}) {
                 <img src={article.img_url} alt={article.title} className="rounded flex flex-col justify-center h-500 w-auto bg-cover"/>                                
                 <h1 className="text-2xl font-bold">{article.title}</h1>
                 <p className="mt-1 text-gray-500 font- overflow-hidden overflow-ellipsis h-24">{article.content}</p>
-                <p>{article.category_id}</p>
+                <p>{article?.category?.name}</p>
             </Link>
             </div>
         </div>
