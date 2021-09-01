@@ -27,7 +27,6 @@ export default function ArticleDetail(props) {
             <div>
               <Link to={`/articles/${articleItem?.id}/edit`}>
                 <button className="edit-btn"><span>Edit</span></button>
-                {/* <br /> */}
               </Link>
               <button className="delete-btn"onClick={() => handleDelete(article?.id)}><span>Delete</span></button>
             </div>
