@@ -5,7 +5,6 @@ import './ArticleDetail.css'
 
 export default function ArticleDetail(props) {
   const [articleItem, setArticleItem] = useState({});
-  const [currentArticle, setCurrentArticle] = useState(null);
   const { id } = useParams();
   const { article, handleDelete, currentUser } = props
 
@@ -20,7 +19,7 @@ export default function ArticleDetail(props) {
 
   return (
     <div className="detail-container">
-      <img className="detail-img" src={articleItem.img_url}/>
+      <img className="detail-img" src={articleItem.img_url} alt={articleItem?.title}/>
       <h1 className="detail-title"><span>{articleItem?.title}</span></h1>
         <p className="detail-content">{articleItem?.content}</p> 
           {currentUser?.id === articleItem?.user_id && (

@@ -1,6 +1,4 @@
 import React from 'react'
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Link } from 'react-router-dom';
 
 export default function Card({article}) {

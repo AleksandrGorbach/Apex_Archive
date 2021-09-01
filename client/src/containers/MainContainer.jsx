@@ -5,7 +5,7 @@ import Article from "../screens/Article/Article";
 import ArticleCreate from "../screens/ArticleCreate/ArticleCreate";
 import ArticleEdit from "../screens/ArticleEdit/ArticleEdit";
 import ArticleDetail from "../screens/ArticleDetail/ArticleDetail";
-import { getAllArticles, getOneArticle, postArticle, putArticle, deleteArticle } from "../services/articles";
+import { getAllArticles, postArticle, putArticle, deleteArticle } from "../services/articles";
 import { getAllCategories } from "../services/categories";
 
 

@@ -7,11 +7,10 @@ export default function ArticleEdit(props) {
     title: '',
     img_url: '',
     content: '',
-    category_id: '',
   })
   const {articles, handleUpdate, categories} = props;
   const {id} = useParams();
-  const {title, img_url, content, category_id} = formData
+  const {title, img_url, content} = formData
   console.log(categories)
 
   useEffect(()=> {

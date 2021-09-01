@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card'
 
 export default function Articles(props) {
-  const { articles, handleDelete, currentUser } = props;
+  const { articles } = props;
 
   return (
     <div className="articles-page">
