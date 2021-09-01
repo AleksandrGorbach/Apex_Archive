@@ -19,5 +19,3 @@ export default function Articles(props) {
     </div>
   );
 }
-
-//  data-aos="zoom-in-down" data-aos-duration="1000" 
