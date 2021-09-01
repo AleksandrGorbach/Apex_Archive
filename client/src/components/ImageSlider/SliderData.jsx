@@ -8,6 +8,6 @@ export const sliderData = [
   },
   {
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC67o3nRi4f-cjwEF3nnhmscNBWHBZVv3opA&usqp=CAU",
+      "https://3.bp.blogspot.com/-_E2SepHgRhc/XRUs_snF6OI/AAAAAAAAH10/abN3SQPQkHYLjHyZnUlsbh9no3wUnC3hwCKgBGAs/w0/apex-legends-mirage-uhdpaper.com-4K-103.jpg",
   },
 ];

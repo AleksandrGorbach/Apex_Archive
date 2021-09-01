@@ -33,4 +33,3 @@ const upperCase = (str) => {
           {props.children}
     </div>
     )}
-
