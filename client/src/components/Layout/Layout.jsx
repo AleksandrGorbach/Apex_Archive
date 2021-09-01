@@ -7,7 +7,7 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 export default function Layout(props) {
     const { currentUser, handleLogout } = props;
     return (
-        <header className="bg-pallette-backgroundLight w-full h-full">
+        <header className="w-full h-full">
             <Navbar currentUser={currentUser} handleLogout={handleLogout}/>
             <ImageSlider />
             {props.children}
