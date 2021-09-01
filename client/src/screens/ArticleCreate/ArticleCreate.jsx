@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './ArticleCreate.css';
 
 export default function ArticleCreate(props) {
   const [formData, setFormData] = useState({
@@ -26,8 +27,13 @@ export default function ArticleCreate(props) {
         handleCreate(formData);
       }}
     >
-      <h3>Create Article</h3>
-        <input
+      <section className="create">
+      <header>
+      <h2>Apex Archive</h2>
+      <h4>Create Article</h4>
+      </header>
+      <div className="create-form">
+        <input className="create-input"
         type='text' 
         name='title' 
         placeholder='Name'
@@ -35,7 +41,7 @@ export default function ArticleCreate(props) {
         onChange={handleChange} 
         />
       <br />
-        <input
+        <input className="create-input"
         type='text'
         name='img_url'
         placeholder='Image URL'
@@ -43,14 +49,14 @@ export default function ArticleCreate(props) {
         onChange={handleChange}
         /> 
       <br />
-        <input
+        <input className="create-input"
         type='text'
         name='content'
         placeholder='content'
         value={content}
         onChange={handleChange}
         />
-        <select onChange={handleChange} name='category_id' value={category_id}>
+        <select className="create-input" onChange={handleChange} name='category_id' value={category_id}>
          <option value="category">Category</option>
             {categories.map((cat) => {
               return (
@@ -58,7 +64,9 @@ export default function ArticleCreate(props) {
               )
             })}
         </select>
-      <button>Submit</button>
+      <button className="create-button">Submit</button>
+      </div>
+      </section>
     </form>
   );
 }

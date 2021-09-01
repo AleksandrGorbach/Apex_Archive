@@ -5,11 +5,13 @@ export default function ArticleEdit(props) {
   const [formData, setFormData] = useState({
     title: '',
     img_url: '',
-    content: ''
+    content: '',
+    category_id: '',
   })
-  const {articles, handleUpdate} = props;
+  const {articles, handleUpdate, categories} = props;
   const {id} = useParams();
-  const {title, img_url, content} = formData
+  const {title, img_url, content, category_id} = formData
+  console.log(categories)
 
   useEffect(()=> {
     const prefillFormData = () => {
@@ -38,33 +40,35 @@ export default function ArticleEdit(props) {
 				handleUpdate(id, formData);
 			}}
       >
-      <label>
-        Name:
         <input 
           type='text' 
           name='title' 
+          placeholder='Title'
           value={title} 
           onChange={handleChange}
         />
-      </label>
-      <label>
-        Image:
         <input 
           type='text' 
           name='img_url' 
+          placeholder='Image URL'
           value={img_url} 
           onChange={handleChange}
         />
-      </label>
-      <label>
-        Content:
         <input 
           type='text' 
           name='content' 
+          placeholder='Content'
           value={content} 
           onChange={handleChange}
         />
-      </label>
+        {/* <select className="create-input" onChange={handleChange} name='category_id' value={category_id}>
+         <option value="category">Category</option>
+            {categories.map((cat) => {
+              return (
+                <option key={cat.id} name='category' value={Number(cat.id)}>{cat.name}</option>
+              )
+            })}
+        </select> */}
       <button>Submit</button>
     </form>
   )
