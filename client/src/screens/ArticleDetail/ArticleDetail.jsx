@@ -6,7 +6,7 @@ import './ArticleDetail.css'
 export default function ArticleDetail(props) {
   const [articleItem, setArticleItem] = useState({});
   const { id } = useParams();
-  const { article, handleDelete, currentUser } = props
+  const { handleDelete, currentUser } = props
 
   useEffect(() => {
     const fetchArticleItem = async () => {
