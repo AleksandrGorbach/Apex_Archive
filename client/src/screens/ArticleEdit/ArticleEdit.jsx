@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import {useParams} from 'react-router-dom';
+import './ArticleEdit.css'
 
 export default function ArticleEdit(props) {
   const [formData, setFormData] = useState({
@@ -39,22 +40,27 @@ export default function ArticleEdit(props) {
 				e.preventDefault();
 				handleUpdate(id, formData);
 			}}
-      >
-        <input 
+      > 
+        <section className="edit">
+        <header>
+            <h2>Apex Archive</h2>
+            <h4>Article Edit</h4>
+        </header>
+        <input className="edit-input"
           type='text' 
           name='title' 
           placeholder='Title'
           value={title} 
           onChange={handleChange}
         />
-        <input 
+        <input className="edit-input" 
           type='text' 
           name='img_url' 
           placeholder='Image URL'
           value={img_url} 
           onChange={handleChange}
         />
-        <input 
+        <textarea className="edit-area" 
           type='text' 
           name='content' 
           placeholder='Content'
@@ -69,7 +75,8 @@ export default function ArticleEdit(props) {
               )
             })}
         </select> */}
-      <button>Submit</button>
+      <button className="edit-button">Submit</button>
+      </section>
     </form>
   )
 }
