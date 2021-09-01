@@ -28,7 +28,7 @@ console.log(articleItem)
               <Link to={`/articles/${articleItem?.id}/edit`}>
                 <button className="edit-btn"><span>Edit</span></button>
               </Link>
-              <button className="delete-btn"onClick={() => handleDelete(article?.id)}><span>Delete</span></button>
+              <button className="delete-btn"onClick={() => handleDelete(articleItem?.id)}><span>Delete</span></button>
             </div>
           )}
     </div>
